@@ -331,7 +331,7 @@ export const HandwrittenCoupleName: React.FC<{
       {...(trigger === 'animate'
         ? { animate: 'visible' }
         : { whileInView: 'visible', viewport: { once: true, margin: '-20px' } })}
-      className={`inline-flex items-baseline justify-center select-none ${className}`}
+      className={`inline-flex items-baseline justify-center pl-[0.08em] select-none ${className}`}
     >
       {/* Groom first letter */}
       <motion.span

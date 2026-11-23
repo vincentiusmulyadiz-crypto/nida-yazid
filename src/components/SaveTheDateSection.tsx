@@ -73,7 +73,7 @@ export const SaveTheDateSection: React.FC<SaveTheDateSectionProps> = ({ currentL
           className={`object-cover w-full h-full absolute inset-0 opacity-80 ${
             isPreview ? 'select-none pointer-events-none' : ''
           }`}
-          style={{ objectPosition: 'center 42%' }}
+          style={{ objectPosition: '41% 62%' }}
           loading="lazy"
           onContextMenu={(e) => {
             if (isPreview) e.preventDefault();

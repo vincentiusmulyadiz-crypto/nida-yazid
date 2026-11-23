@@ -69,7 +69,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
             src={couplePhoto}
             alt={`${couple.bride.name} & ${couple.groom.name}`}
             className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-            style={{ objectPosition: 'center 35%', filter: 'brightness(0.82)' }}
+            style={{ objectPosition: '58% 55%', filter: 'brightness(0.82)' }}
             onError={() => setPhotoError(true)}
           />
         ) : (
@@ -132,7 +132,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
           <HandwrittenText text="the wedding of" delay={0.2} trigger="view" />
         </p>
 
-        <h2 className="text-[clamp(36px,8.5cqw,46px)] text-[#EADBC8] leading-[1.08] [text-shadow:0_2px_14px_rgba(0,0,0,0.7),0_1px_4px_rgba(0,0,0,0.5)] text-center [text-wrap:balance]">
+        <h2 className="w-full flex justify-center text-[clamp(36px,8.5cqw,46px)] text-[#EADBC8] leading-[1.08] [text-shadow:0_2px_14px_rgba(0,0,0,0.7),0_1px_4px_rgba(0,0,0,0.5)] text-center [text-wrap:balance]">
           <HandwrittenCoupleName groom={couple.bride.name} bride={couple.groom.name} delay={0.45} trigger="view" />
         </h2>
       </motion.div>

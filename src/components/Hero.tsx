@@ -50,18 +50,11 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
           <HandwrittenCoupleName groom={couple.bride.name} bride={couple.groom.name} delay={0.45} trigger="animate" />
         </h1>
 
-        {/* Extended desktop quote using Arial */}
+        {/* Extended desktop quote using Arial (no Arabic on desktop left panel) */}
         <blockquote
           style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
           className="max-w-[48vw] drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]"
         >
-          <p
-            dir="rtl"
-            lang="ar"
-            className="mb-2 text-[clamp(11px,0.9vw,13px)] leading-[1.6] text-[#F7F5F0]/90 font-normal"
-          >
-            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
-          </p>
           <p className="text-[clamp(13px,1vw,16px)] leading-[1.45] text-[#F7F5F0]/95 font-normal [text-wrap:pretty] mb-[6px]">
             &ldquo;{currentLang === 'id'
               ? 'Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.'
