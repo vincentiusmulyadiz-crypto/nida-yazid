@@ -51,7 +51,7 @@ export const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ className = ''
         >
           <img
             src={slides[activeIndex]}
-            alt={`Prewedding Seno & Jattu slide ${activeIndex + 1}`}
+            alt={`Prewedding Nida & Yazid slide ${activeIndex + 1}`}
             style={{
               filter: hasOpened ? 'brightness(0.45) contrast(1.04)' : 'brightness(0.65) contrast(1.02)',
               transition: 'filter 1s ease',

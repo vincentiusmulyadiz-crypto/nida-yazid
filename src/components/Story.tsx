@@ -28,7 +28,7 @@ export const Story: React.FC<StoryProps> = ({ currentLang }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-40px' }}
         transition={{ duration: 0.7, ease: 'easeOut' }}
-        className="space-y-2 mb-12 max-w-[34ch] mx-auto text-center"
+        className="space-y-2 mb-12 max-w-md mx-auto text-center"
       >
         <div className="flex justify-center mb-2.5 text-white/85">
           <LoveStoryIcon className="w-8 h-8 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] icon-wiggle" />
@@ -56,7 +56,7 @@ export const Story: React.FC<StoryProps> = ({ currentLang }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-30px' }}
               transition={{ duration: 0.7, delay: idx * 0.08, ease: 'easeOut' }}
-              className={`w-[82%] sm:w-[80%] flex flex-col ${
+              className={`w-[88%] sm:w-[86%] flex flex-col ${
                 isRight
                   ? 'ml-auto items-end text-right'
                   : 'mr-auto items-start text-left'
@@ -78,10 +78,11 @@ export const Story: React.FC<StoryProps> = ({ currentLang }) => {
                 </h4>
               </div>
 
-              {/* Description underneath (max 2 lines, bounded to 70-75% width) */}
+              {/* Description underneath (justified neatly without wide gaps) */}
               <p
-                className={`font-text text-[var(--fs-body)] text-[#F7F5F0]/85 leading-[var(--lh-body)] text-pretty drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] mt-2 ${
-                  isRight ? 'text-right' : 'text-left'
+                lang={currentLang}
+                className={`font-text text-[var(--fs-body)] text-[#F7F5F0]/85 leading-[var(--lh-body)] text-justify hyphens-auto drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] mt-2 ${
+                  isRight ? '[text-align-last:right]' : '[text-align-last:left]'
                 }`}
               >
                 {milestone.description}

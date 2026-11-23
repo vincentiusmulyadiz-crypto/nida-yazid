@@ -46,13 +46,14 @@ export const MixedText: React.FC<MixedTextProps> = ({ text, className = '', colo
 
   const firstLetter = trimmed.charAt(0).toUpperCase();
   const remaining = trimmed.slice(1).toLowerCase();
+  const kerningClass = firstLetter === 'O' ? '-mr-[0.14em]' : '-mr-[0.04em]';
 
   return (
     <span
-      className={`inline-flex items-baseline justify-center tracking-normal select-none ${className}`}
+      className={`inline-flex items-baseline justify-center tracking-normal whitespace-nowrap select-none ${className}`}
     >
       <span
-        className={`font-['Great_Vibes',cursive] font-normal text-[1.38em] leading-none -mr-[0.02em] ${color}`}
+        className={`font-['Great_Vibes',cursive] font-normal text-[1.38em] leading-none ${kerningClass} ${color}`}
         style={{ transform: 'translateY(0.03em)' }}
       >
         {firstLetter}
@@ -73,7 +74,7 @@ export const SwashHeading: React.FC<{
 
   return (
     <h3
-      className={`text-[clamp(28px,6.5cqw,34px)] leading-tight text-[#EADBC8] select-none ${className}`}
+      className={`text-[clamp(22px,5.6cqw,32px)] leading-tight text-[#EADBC8] whitespace-nowrap select-none ${className}`}
     >
       {typeof content === 'string' && content.length > 0 ? (
         <MixedText text={content} />

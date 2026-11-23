@@ -620,7 +620,9 @@ export const Rsvp: React.FC<RsvpProps> = ({ currentLang, onShowToast }) => {
                   <span className="font-arial text-white font-medium text-[14px] truncate">{w.name}</span>
                   <span className="font-arial text-[12px] text-white/50 shrink-0">{w.createdAt}</span>
                 </div>
-                <p className="font-arial text-[13.5px] text-white/85 leading-relaxed break-words">{w.message}</p>
+                <p className="font-arial text-[13.5px] text-white/85 leading-relaxed break-words">
+                  {(w.message || '').replace(/^\[Hadir:[^\]]+\]\s*/i, '')}
+                </p>
               </div>
             ))}
           </div>
