@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-23T12:20:10.186Z",
+  "slug": "nida-yazid",
+  "config": {
+    "templateName": "DAWNLIGHT — Nida & Yazid",
+    "whatsapp": "6285221244934",
+    "customerId": "5733a40e-4462-4ade-a49c-8362bd0a2aca",
+    "ownerId": "6e8ab168-ccc3-4825-ba3d-2456d1d29d50",
+    "supabaseUrl": "https://uazfzmuvunmhnjdfxbbi.supabase.co",
+    "supabasePublishableKey": "sb_publishable_Kbhrasv4jWCwnd52QRvprQ_1bJ-EDpe"
+  },
+  "media": {
+    "cover": "order/cover.jpg",
+    "welcome": "order/welcome.jpg",
+    "couple": "order/couple.jpg",
+    "gallery-1": "order/gallery-1.jpg",
+    "gallery-2": "order/gallery-2.jpg",
+    "gallery-3": "order/gallery-3.jpg",
+    "gallery-4": "order/gallery-4.jpg",
+    "gallery-5": "order/gallery-5.jpg",
+    "gallery-6": "order/gallery-6.jpg",
+    "gallery-7": "order/gallery-7.jpg",
+    "gallery-8": "order/gallery-8.jpg",
+    "gallery-9": "order/gallery-9.jpg",
+    "gallery-10": "order/gallery-10.jpg",
+    "gallery-11": "order/gallery-11.jpg",
+    "gallery-12": "order/gallery-12.jpg",
+    "gallery-13": "order/gallery-13.jpg",
+    "gallery-14": "order/gallery-14.jpg",
+    "gallery-15": "order/gallery-15.jpg",
+    "gallery-16": "order/gallery-16.jpg",
+    "gallery-17": "order/gallery-17.jpg",
+    "gallery-18": "order/gallery-18.jpg",
+    "gallery-19": "order/gallery-19.jpg"
+  },
+  "couple": {
+    "groom": {
+      "name": "Yazid",
+      "fullName": "Ibnu Yazid Arrazak Sarifuddin, B.IBM (Hons.)",
+      "parents": "Bapak Sarifuddin, S.E. & Ibu Dewi Jusrini, S.E.",
+      "instagram": "@ibnyzdd",
+      "instagramUrl": "https://instagram.com/ibnyzdd",
+      "photo": "/photos/groom.jpg",
+      "bio": ""
+    },
+    "bride": {
+      "name": "Nida",
+      "fullName": "Annida Sunanda, S.Ak.",
+      "parents": "Bapak Suhartono, S.Kom. & Ibu Nani Khaironi, S.E.",
+      "instagram": "@annidasnda",
+      "instagramUrl": "https://instagram.com/annidasnda",
+      "photo": "/photos/bride.jpg",
+      "bio": ""
+    },
+    "hashtag": "NIDAYAZID",
+    "quote": {
+      "text": "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.",
+      "source": "QS. Ar-Rum : 21"
+    }
+  },
+  "events": {
+    "countdownTarget": "2027-01-10T08:00:00+07:00",
+    "akadOrMatrimony": {
+      "id": "akad-nikah",
+      "title": "Akad Nikah",
+      "subtitle": "The Sacred Vows & Solemnization",
+      "day": "Minggu",
+      "date": "10 Januari 2027",
+      "time": "08:00 – 10:00 WIB",
+      "timezone": "WIB (UTC+7)",
+      "venueName": "Gedung Bangda Depdagri",
+      "address": "Jl. Taman Makam Pahlawan No.20, RT.12/RW.5, Kalibata, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12750",
+      "mapsUrl": "https://maps.app.goo.gl/3nnm1gnRWT33S7CZ8?g_st=ic",
+      "calendarEvent": {
+        "title": "Akad Nikah: Nida & Yazid",
+        "description": "Akad Nikah Annida Sunanda & Ibnu Yazid Arrazak Sarifuddin di Gedung Bangda Depdagri",
+        "location": "Gedung Bangda Depdagri, Jakarta Selatan",
+        "start": "20270110T010000Z",
+        "end": "20270110T030000Z"
+      }
+    },
+    "culturalCeremony": {
+      "id": "cultural-ceremony",
+      "title": "Cultural Ceremony (Adat)",
+      "subtitle": "Traditional Rituals & Blessings",
+      "day": "Sunday",
+      "date": "January 10, 2027",
+      "time": "01:00 PM – 03:30 PM WIB",
+      "timezone": "WIB (UTC+7)",
+      "venueName": "Gedung Bangda Depdagri",
+      "address": "Jl. Taman Makam Pahlawan No.20, RT.12/RW.5, Kalibata, Kec. Pancoran, Kota Jakarta Selatan",
+      "mapsUrl": "https://maps.app.goo.gl/3nnm1gnRWT33S7CZ8?g_st=ic",
+      "calendarEvent": {
+        "title": "Cultural Ceremony: Nida & Yazid",
+        "description": "Cultural ceremony for Nida & Yazid",
+        "location": "Gedung Bangda Depdagri",
+        "start": "20270110T010000Z",
+        "end": "20270110T030000Z"
+      }
+    },
+    "reception": {
+      "id": "resepsi-pernikahan",
+      "title": "Resepsi Pernikahan",
+      "subtitle": "The Wedding Reception & Celebration",
+      "day": "Minggu",
+      "date": "10 Januari 2027",
+      "time": "10:45 – 13:00 WIB",
+      "timezone": "WIB (UTC+7)",
+      "venueName": "Gedung Bangda Depdagri",
+      "address": "Jl. Taman Makam Pahlawan No.20, RT.12/RW.5, Kalibata, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12750",
+      "mapsUrl": "https://maps.app.goo.gl/3nnm1gnRWT33S7CZ8?g_st=ic",
+      "calendarEvent": {
+        "title": "Resepsi Pernikahan: Nida & Yazid",
+        "description": "Resepsi Pernikahan Annida Sunanda & Ibnu Yazid Arrazak Sarifuddin di Gedung Bangda Depdagri",
+        "location": "Gedung Bangda Depdagri, Jakarta Selatan",
+        "start": "20270110T034500Z",
+        "end": "20270110T060000Z"
+      }
+    }
+  },
+  "typography": {
+    "heroTitle": "NIDA & YAZID",
+    "heroSubtitle": "THE WEDDING CELEBRATION",
+    "quoteLine1": "Two souls, one destiny—",
+    "quoteLine2": "come celebrate",
+    "quoteLine3": "our forever.",
+    "quoteLine1Id": "Dua hati, satu takdir—",
+    "quoteLine2Id": "mari rayakan",
+    "quoteLine3Id": "bersama kami."
+  },
+  "coupleSection": {
+    "photo": "/couple.jpg",
+    "quote": "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.",
+    "quoteId": "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.",
+    "quoteSource": "QS. Ar-Rum : 21"
+  },
+  "coverImage": "order/cover.jpg",
+  "welcomePhoto": "order/welcome.jpg",
+  "couplePhoto": "order/couple.jpg",
+  "accessCardPhoto": "/photos/story.jpg",
+  "closingPhoto": "/photos/closing.jpg",
+  "galleryPhotos": [
+    {
+      "id": "g-1",
+      "src": "order/gallery-1.jpg",
+      "alt": "Nida & Yazid Prewedding 1",
+      "caption": "Nida & Yazid Prewedding 1",
+      "orientation": "landscape"
+    },
+    {
+      "id": "g-2",
+      "src": "order/gallery-2.jpg",
+      "alt": "Nida & Yazid Prewedding 2",
+      "caption": "Nida & Yazid Prewedding 2",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-3",
+      "src": "order/gallery-3.jpg",
+      "alt": "Nida & Yazid Prewedding 3",
+      "caption": "Nida & Yazid Prewedding 3",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-4",
+      "src": "order/gallery-4.jpg",
+      "alt": "Nida & Yazid Prewedding 4",
+      "caption": "Nida & Yazid Prewedding 4",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-5",
+      "src": "order/gallery-5.jpg",
+      "alt": "Nida & Yazid Prewedding 5",
+      "caption": "Nida & Yazid Prewedding 5",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-6",
+      "src": "order/gallery-6.jpg",
+      "alt": "Nida & Yazid Prewedding 6",
+      "caption": "Nida & Yazid Prewedding 6",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-7",
+      "src": "order/gallery-7.jpg",
+      "alt": "Nida & Yazid Prewedding 7",
+      "caption": "Nida & Yazid Prewedding 7",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-8",
+      "src": "order/gallery-8.jpg",
+      "alt": "Nida & Yazid Prewedding 8",
+      "caption": "Nida & Yazid Prewedding 8",
+      "orientation": "landscape"
+    },
+    {
+      "id": "g-9",
+      "src": "order/gallery-9.jpg",
+      "alt": "Nida & Yazid Prewedding 9",
+      "caption": "Nida & Yazid Prewedding 9",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-10",
+      "src": "order/gallery-10.jpg",
+      "alt": "Nida & Yazid Prewedding 10",
+      "caption": "Nida & Yazid Prewedding 10",
+      "orientation": "landscape"
+    },
+    {
+      "id": "g-11",
+      "src": "order/gallery-11.jpg",
+      "alt": "Nida & Yazid Prewedding 11",
+      "caption": "Nida & Yazid Prewedding 11",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-12",
+      "src": "order/gallery-12.jpg",
+      "alt": "Nida & Yazid Prewedding 12",
+      "caption": "Nida & Yazid Prewedding 12",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-13",
+      "src": "order/gallery-13.jpg",
+      "alt": "Nida & Yazid Prewedding 13",
+      "caption": "Nida & Yazid Prewedding 13",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-14",
+      "src": "order/gallery-14.jpg",
+      "alt": "Nida & Yazid Prewedding 14",
+      "caption": "Nida & Yazid Prewedding 14",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-15",
+      "src": "order/gallery-15.jpg",
+      "alt": "Nida & Yazid Prewedding 15",
+      "caption": "Nida & Yazid Prewedding 15",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-16",
+      "src": "order/gallery-16.jpg",
+      "alt": "Nida & Yazid Prewedding 16",
+      "caption": "Nida & Yazid Prewedding 16",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-17",
+      "src": "order/gallery-17.jpg",
+      "alt": "Nida & Yazid Prewedding 17",
+      "caption": "Nida & Yazid Prewedding 17",
+      "orientation": "portrait"
+    },
+    {
+      "id": "g-18",
+      "src": "order/gallery-18.jpg",
+      "alt": "Nida & Yazid Prewedding 18",
+      "caption": "Nida & Yazid Prewedding 18",
+      "orientation": "landscape"
+    },
+    {
+      "id": "g-19",
+      "src": "order/gallery-19.jpg",
+      "alt": "Nida & Yazid Prewedding 19",
+      "caption": "Nida & Yazid Prewedding 19",
+      "orientation": "landscape"
+    }
+  ],
+  "storyMilestones": [
+    {
+      "year": "2022",
+      "title": "Where It All Began",
+      "description": "It all started at the office, right in the middle of busy schedules and daily deadlines. What began as casual conversations, brief small talk, and shared coffee breaks slowly turned into something much more meaningful. Neither of us expected that an ordinary workplace would become the starting point of our story, yet somehow, our paths naturally aligned.",
+      "image": "/photos/gallery-1.jpg"
+    },
+    {
+      "year": "2022",
+      "title": "More Than Just Colleagues",
+      "description": "As the months passed, familiarity grew into genuine comfort and trust. Between work routines and after-hours conversations, we realized how effortless it felt to be around each other. Before the year came to a close, we decided to step beyond being mere coworkers and officially started our journey as a couple, choosing to face every tomorrow together.",
+      "image": "/photos/gallery-2.jpg"
+    },
+    {
+      "year": "2026",
+      "title": "A Sincere Promise",
+      "description": "Four years of growing together, supporting each other's dreams, and learning through life's ups and downs led us to a defining milestone. Surrounded by the warmth, prayers, and blessings of our beloved families, we took a meaningful step forward through our engagement—turning years of quiet certainty into a solemn promise for the future.",
+      "image": "/photos/gallery-3.jpg"
+    },
+    {
+      "year": "2027",
+      "title": "The Beginning of Forever",
+      "description": "With the blessings of our families and the grace of Allah, our paths lead us to the moment we become husband and wife, knowing that whatever the future holds, we will face it hand in hand through every season of life. From colleagues to life partners, we are deeply grateful for every step that brought us here—and even more excited for the lifetime ahead.",
+      "image": "/photos/story.jpg"
+    }
+  ],
+  "selectedPresetId": "v1",
+  "activeMusic": "/music.mp3",
+  "titleTone": "light",
+  "guestName": "Guest",
+  "showHolyMatrimony": true,
+  "showAdat": false,
+  "showReception": true,
+  "showStory": true,
+  "showRsvp": true,
+  "showAccessCard": false,
+  "showGift": true,
+  "showPhysicalGift": false,
+  "bgType": "slideshow",
+  "bgPhoto": "/poster.jpg",
+  "bankAccounts": [
+    {
+      "bankName": "Bank Central Asia (BCA)",
+      "accountNumber": "6330888855",
+      "accountHolder": "Ibnu Yazid Arrazak"
+    },
+    {
+      "bankName": "Bank Mandiri",
+      "accountNumber": "1270011262142",
+      "accountHolder": "Annida Sunanda"
+    }
+  ],
+  "physicalGiftAddress": {
+    "recipient": "Annida Sunanda",
+    "phone": "0852-2124-4934",
+    "address": "Konfirmasi alamat pengiriman kado fisik melalui WhatsApp",
+    "city": "Jakarta Selatan",
+    "postalCode": "12750",
+    "notes": "Silakan hubungi WhatsApp mempelai untuk konfirmasi kado fisik."
+  },
+  "liveStream": {
+    "preWedVideoUrl": "",
+    "liveStreamUrl": ""
+  },
+  "bgPhotos": [
+    "/slideshow/slideshow1.jpg",
+    "/slideshow/slideshow2.jpg",
+    "/slideshow/slideshow3.jpg",
+    "/slideshow/slideshow4.jpg",
+    "/slideshow/slideshow5.jpg",
+    "/slideshow/slideshow6.jpg",
+    "/slideshow/slideshow7.jpg",
+    "/slideshow/slideshow8.jpg",
+    "/slideshow/slideshow9.jpg"
+  ]
+}
