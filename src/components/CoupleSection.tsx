@@ -11,6 +11,7 @@ interface CoupleSectionProps {
 }
 
 export const CoupleSection: React.FC<CoupleSectionProps> = ({
+  currentLang,
   scrollContainerRef,
   isCoverRemoved = false,
 }) => {
