@@ -10,13 +10,6 @@ interface BackgroundVideoProps {
 const DEFAULT_SLIDES = [
   '/slideshow/slideshow1.jpg',
   '/slideshow/slideshow2.jpg',
-  '/slideshow/slideshow3.jpg',
-  '/slideshow/slideshow4.jpg',
-  '/slideshow/slideshow5.jpg',
-  '/slideshow/slideshow6.jpg',
-  '/slideshow/slideshow7.jpg',
-  '/slideshow/slideshow8.jpg',
-  '/slideshow/slideshow9.jpg',
 ];
 
 export const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ className = '', hasOpened = false }) => {

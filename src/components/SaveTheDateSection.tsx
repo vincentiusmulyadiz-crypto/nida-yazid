@@ -47,7 +47,7 @@ export const SaveTheDateSection: React.FC<SaveTheDateSectionProps> = ({ currentL
   })();
 
   // Use a distinct high-resolution portrait photo from the compressed package (different from /couple.jpg)
-  const photoSrc = '/photos/gallery-3.jpg';
+  const photoSrc = '/photos/save-the-date.jpg';
 
   return (
     <section
@@ -73,7 +73,7 @@ export const SaveTheDateSection: React.FC<SaveTheDateSectionProps> = ({ currentL
           className={`object-cover w-full h-full absolute inset-0 opacity-80 ${
             isPreview ? 'select-none pointer-events-none' : ''
           }`}
-          style={{ objectPosition: '41% 62%' }}
+          style={{ objectPosition: 'center center' }}
           loading="lazy"
           onContextMenu={(e) => {
             if (isPreview) e.preventDefault();

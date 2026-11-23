@@ -69,7 +69,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
             src={couplePhoto}
             alt={`${couple.bride.name} & ${couple.groom.name}`}
             className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-            style={{ objectPosition: '58% 55%', filter: 'brightness(0.82)' }}
+            style={{ objectPosition: 'center center', filter: 'brightness(0.82)' }}
             onError={() => setPhotoError(true)}
           />
         ) : (

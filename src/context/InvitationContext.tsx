@@ -368,13 +368,6 @@ export const InvitationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     return [
       '/slideshow/slideshow1.jpg',
       '/slideshow/slideshow2.jpg',
-      '/slideshow/slideshow3.jpg',
-      '/slideshow/slideshow4.jpg',
-      '/slideshow/slideshow5.jpg',
-      '/slideshow/slideshow6.jpg',
-      '/slideshow/slideshow7.jpg',
-      '/slideshow/slideshow8.jpg',
-      '/slideshow/slideshow9.jpg',
     ];
   });
 

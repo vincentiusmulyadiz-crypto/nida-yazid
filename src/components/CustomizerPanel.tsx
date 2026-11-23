@@ -1661,13 +1661,6 @@ export const CustomizerPanel: React.FC<CustomizerPanelProps> = ({ currentLang })
                           setBgPhotos([
                             '/slideshow/slideshow1.jpg',
                             '/slideshow/slideshow2.jpg',
-                            '/slideshow/slideshow3.jpg',
-                            '/slideshow/slideshow4.jpg',
-                            '/slideshow/slideshow5.jpg',
-                            '/slideshow/slideshow6.jpg',
-                            '/slideshow/slideshow7.jpg',
-                            '/slideshow/slideshow8.jpg',
-                            '/slideshow/slideshow9.jpg',
                           ])
                         }
                         className="text-[11px] text-white/60 hover:text-white underline cursor-pointer"
