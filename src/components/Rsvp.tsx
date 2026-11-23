@@ -413,7 +413,7 @@ export const Rsvp: React.FC<RsvpProps> = ({ currentLang, onShowToast }) => {
           className="mb-8 text-center"
         >
           <h3 className="text-[clamp(28px,6.5cqw,34px)] leading-tight text-[#EADBC8] text-center mx-auto">
-            <MixedText text="YOUR RSVP" />
+            <MixedText text={currentLang === 'id' ? 'RSVP' : 'YOUR RSVP'} />
           </h3>
         </motion.div>
 
@@ -594,7 +594,7 @@ export const Rsvp: React.FC<RsvpProps> = ({ currentLang, onShowToast }) => {
       {/* Wishes Display List in Arial */}
       <div className="mt-14 max-w-sm mx-auto space-y-4 font-arial text-left">
         <h4 className="text-[clamp(24px,5.5cqw,28px)] leading-tight text-center text-[#EADBC8] mb-6 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
-          <MixedText text="YOUR WISHES" />
+          <MixedText text={currentLang === 'id' ? 'DOA & UCAPAN' : 'YOUR WISHES'} />
         </h4>
 
         {isLoadingWishes && (

@@ -47,7 +47,7 @@ export const Gift: React.FC<GiftProps> = ({ currentLang, onShowToast }) => {
         className="mb-8 max-w-md mx-auto text-center"
       >
         <h3 className="text-[clamp(28px,6.5cqw,34px)] leading-tight text-[#EADBC8] text-center mx-auto">
-          <MixedText text="WEDDING GIFT" />
+          <MixedText text={currentLang === 'id' ? 'TANDA KASIH' : 'WEDDING GIFT'} />
         </h3>
       </motion.div>
 

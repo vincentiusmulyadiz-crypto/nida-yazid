@@ -51,7 +51,7 @@ const CustomizeButton = isCustomizerEnabled
   : null;
 
 function InvitationApp() {
-  const [currentLang, setCurrentLang] = useState<Language>('id');
+  const [currentLang, setCurrentLang] = useState<Language>('en');
   const [hasOpened, setHasOpened] = useState(false);
   const [coverRemoved, setCoverRemoved] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);

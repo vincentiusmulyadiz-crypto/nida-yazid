@@ -98,7 +98,7 @@ export const BrideSection: React.FC<BrideSectionProps> = ({
         className="absolute left-[24px] z-10 pointer-events-none text-left"
       >
         <h3 className="text-[clamp(28px,6.5cqw,34px)] font-normal leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] text-[#EADBC8]">
-          <MixedText text="THE BRIDE" />
+          <MixedText text={currentLang === 'id' ? 'MEMPELAI WANITA' : 'THE BRIDE'} />
         </h3>
       </motion.div>
 

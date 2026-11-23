@@ -80,32 +80,37 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
         <div className="hidden lg:block absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/80 via-black/35 to-transparent pointer-events-none z-[1]" />
       </motion.div>
 
-      {/* Quote at the TOP: centered, delicate */}
+      {/* Quote at the TOP: wide bounds matching Renita format, font of this invite, no animation */}
       <motion.div
         style={{
           opacity: contentOpacity,
           y: contentY,
         }}
-        className="absolute inset-x-0 mx-auto text-center px-6 z-10 pointer-events-none"
+        className="absolute inset-x-0 mx-auto text-center px-3 sm:px-4 z-10 pointer-events-none"
       >
         <div
           style={{
-            marginTop: 'calc(env(safe-area-inset-top, 0px) + 52px)',
+            marginTop: 'calc(env(safe-area-inset-top, 0px) + 68px)',
           }}
-          className="max-w-[85%] mx-auto text-center"
+          className="w-[90%] max-w-[380px] mx-auto text-center"
         >
           <p
-            className={`font-['Arimo',sans-serif] italic text-[clamp(15px,3.4cqw,18px)] leading-[1.5] text-center [text-wrap:balance] drop-shadow-[0_1px_8px_rgba(0,0,0,0.65)] font-normal ${
-              titleTone === 'dark' ? 'text-black' : 'text-[#F7F5F0]'
-            }`}
+            dir="rtl"
+            lang="ar"
+            className="font-['Arimo',sans-serif] mb-2.5 text-[clamp(8.2px,2.05cqw,9.8px)] leading-[1.6] whitespace-nowrap text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
           >
-            &ldquo;<HandwrittenText text={cleanQuote} delay={0.15} trigger="view" />&rdquo;
+            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
           </p>
-          {cleanSource && (
-            <p className="font-['Arimo',sans-serif] text-[11px] sm:text-[11.5px] text-[#EADBC8]/90 mt-2.5 drop-shadow-[0_1px_8px_rgba(0,0,0,0.6)] tracking-wider font-medium text-center">
-              <HandwrittenText text={cleanSource.startsWith('(') ? cleanSource : cleanSource.includes('(') ? cleanSource : `(${cleanSource})`} delay={0.65} trigger="view" />
-            </p>
-          )}
+          <p
+            className="font-['Arimo',sans-serif] text-[clamp(9.2px,2.25cqw,10.5px)] leading-[1.48] text-justify [text-align-last:center] drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
+          >
+            &ldquo;{currentLang === 'id'
+              ? 'Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.'
+              : 'And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought.'}&rdquo;
+          </p>
+          <p className="font-['Arimo',sans-serif] text-[10.5px] sm:text-[11.5px] tracking-[0.16em] font-semibold uppercase text-[#EADBC8] mt-2 text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] leading-relaxed">
+            {currentLang === 'id' ? 'QS. AR-RUM : 21' : 'SURAH AR-RUM : 21'}
+          </p>
         </div>
       </motion.div>
 

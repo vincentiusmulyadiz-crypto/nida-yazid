@@ -41,11 +41,11 @@ export const Closing: React.FC<ClosingProps> = ({ currentLang }) => {
           }}
         />
 
-        {/* Dark gradient overlay at bottom for crystal-clear text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 pointer-events-none z-[1]" />
+        {/* Subtle bottom gradient only for footer credit readability, keeping full photo opacity & clarity */}
+        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black/70 to-transparent pointer-events-none z-[1]" />
       </div>
 
-      {/* Top Floating Overlay: Couple Names ("With Love" without comma placed at the TOP of the section) */}
+      {/* Top Floating Overlay: Couple Names ("With Love" / "Dengan Kasih") */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export const Closing: React.FC<ClosingProps> = ({ currentLang }) => {
         className="relative z-10 w-full pt-[calc(env(safe-area-inset-top,0px)+36px)] px-6 sm:px-8 space-y-1 text-center max-w-sm mx-auto"
       >
         <p className="font-['Arimo',sans-serif] text-[12px] sm:text-[12.5px] text-[#EADBC8]/90 tracking-[0.2em] uppercase font-medium drop-shadow-[0_1px_8px_rgba(0,0,0,0.6)]">
-          With Love
+          {currentLang === 'id' ? 'Dengan Kasih' : 'With Love'}
         </p>
 
         <h3 className="text-[clamp(34px,8cqw,42px)] text-[#ffffff] leading-[1.08] drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)] text-center">

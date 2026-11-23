@@ -39,7 +39,7 @@ export const Story: React.FC<StoryProps> = ({ currentLang }) => {
         </p>
 
         <SwashHeading
-          text={isId ? 'Kisah Kami Bersemi' : 'Ours Became Forever'}
+          text={isId ? 'KISAH KAMI' : 'OUR STORY'}
           className="mx-auto text-center"
         />
       </motion.div>

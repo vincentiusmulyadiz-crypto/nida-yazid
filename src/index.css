@@ -348,13 +348,13 @@ body {
   letter-spacing: normal !important;
 }
 
-/* Generous editorial spacing for event cards and section transitions */
+/* Closer, cohesive editorial spacing for event cards */
 .event-card-spacing {
-  margin-bottom: 190px;
+  margin-bottom: 72px;
 }
 @media (min-width: 640px) {
   .event-card-spacing {
-    margin-bottom: 220px;
+    margin-bottom: 88px;
   }
 }
 

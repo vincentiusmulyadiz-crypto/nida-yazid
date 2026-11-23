@@ -180,6 +180,23 @@ export const GlobalControls: React.FC<GlobalControlsProps> = ({
         )}
       </div>
 
+      {/* Bottom-Right EN / ID Language Switch Toggle */}
+      <div
+        className="fixed lg:absolute bottom-4 right-4 z-40 pointer-events-auto"
+        style={{ bottom: 'calc(env(safe-area-inset-bottom, 0px) + 16px)' }}
+      >
+        <button
+          type="button"
+          onClick={() => onLanguageChange(currentLang === 'id' ? 'en' : 'id')}
+          className="h-9 px-3 rounded-full bg-black/45 hover:bg-black/65 text-white border border-white/25 backdrop-blur-md flex items-center gap-1.5 text-[11px] font-['Arimo',sans-serif] font-medium tracking-wider uppercase transition-all shadow-sm cursor-pointer select-none"
+          aria-label={currentLang === 'id' ? 'Switch language to English' : 'Ganti bahasa ke Indonesia'}
+          title={currentLang === 'id' ? 'Switch to English' : 'Ganti ke Bahasa Indonesia'}
+        >
+          <Globe className="w-3.5 h-3.5 text-[#EADBC8]" />
+          <span>{currentLang === 'id' ? 'ID' : 'EN'}</span>
+        </button>
+      </div>
+
 
 
       {/* Slide-Up Navigation Drawer */}

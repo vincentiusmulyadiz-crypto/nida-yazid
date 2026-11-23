@@ -50,13 +50,22 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
           <HandwrittenCoupleName groom={couple.bride.name} bride={couple.groom.name} delay={0.45} trigger="animate" />
         </h1>
 
-        {/* Extended desktop quote up to 50vw width */}
-        <blockquote className="max-w-[50vw] font-text drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
-          <p className="text-[clamp(15px,1.2vw,19px)] leading-[1.4] text-[#F7F5F0]/95 font-normal [text-wrap:pretty] mb-[8px]">
-            &ldquo;<HandwrittenText text={couple.quote.text.replace(/^["“”']+|[”"']+$/g, '').trim()} delay={0.8} trigger="animate" />&rdquo;
+        {/* Extended desktop quote matching Renita layout with font of this invite */}
+        <blockquote className="max-w-[48vw] font-['Arimo',sans-serif] drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
+          <p
+            dir="rtl"
+            lang="ar"
+            className="mb-2 text-[clamp(11px,0.9vw,13px)] leading-[1.6] text-[#F7F5F0]/90 font-normal"
+          >
+            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
           </p>
-          <cite className="block text-[clamp(12px,0.95vw,14px)] text-[#EADBC8]/90 not-italic mb-[20px] whitespace-pre-line leading-relaxed font-medium">
-            <HandwrittenText text={couple.quote.source.includes('(') ? couple.quote.source : `(${couple.quote.source})`} delay={1.3} trigger="animate" />
+          <p className="text-[clamp(13px,1vw,16px)] leading-[1.45] text-[#F7F5F0]/95 font-normal [text-wrap:pretty] mb-[6px]">
+            &ldquo;{currentLang === 'id'
+              ? 'Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.'
+              : 'And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought.'}&rdquo;
+          </p>
+          <cite className="block text-[clamp(11px,0.85vw,13px)] text-[#EADBC8] not-italic mb-[18px] tracking-[0.12em] uppercase font-semibold">
+            {currentLang === 'id' ? 'QS. AR-RUM : 21' : 'SURAH AR-RUM : 21'}
           </cite>
         </blockquote>
 

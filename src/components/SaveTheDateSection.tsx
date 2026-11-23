@@ -69,7 +69,7 @@ export const SaveTheDateSection: React.FC<SaveTheDateSectionProps> = ({ currentL
       >
         <img
           src={photoSrc}
-          alt="Seno & Jattu Save The Date"
+          alt="Nida & Yazid Save The Date"
           className={`object-cover w-full h-full absolute inset-0 opacity-80 ${
             isPreview ? 'select-none pointer-events-none' : ''
           }`}
@@ -101,20 +101,16 @@ export const SaveTheDateSection: React.FC<SaveTheDateSectionProps> = ({ currentL
           <MixedText text="SAVE THE DATE" color="text-[#EADBC8]" />
         </h2>
 
-        {/* Date: 22 November 2026 (Ukuran lebih besar dari Save the Date dengan spasi konsisten)
-            - 22 & 2026: Font kedua (Cormorant Garamond), warna putih
-            - November: Font kedua (Cormorant Garamond italic), seluruh huruf termasuk N seragam, warna putih
-            - Warna putih semua (text-white)
-        */}
+        {/* Date: 10 Januari 2027 (Ukuran lebih besar dari Save the Date dengan spasi konsisten) */}
         <div className="flex items-baseline justify-center gap-3 sm:gap-3.5 text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.8)] pt-0.5">
           <span className="font-['Cormorant_Garamond',serif] text-[34px] sm:text-[40px] font-medium tracking-wide text-white leading-none">
-            22
+            10
           </span>
           <span className="font-['Cormorant_Garamond',serif] italic text-[34px] sm:text-[40px] font-medium tracking-wide text-white leading-none">
-            November
+            {currentLang === 'id' ? 'Januari' : 'January'}
           </span>
           <span className="font-['Cormorant_Garamond',serif] text-[34px] sm:text-[40px] font-medium tracking-wide text-white leading-none">
-            2026
+            2027
           </span>
         </div>
       </motion.div>

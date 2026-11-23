@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
-import { ChevronLeft, ChevronRight, X, Maximize2, Plus } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion } from 'motion/react';
+import { Maximize2, Plus } from 'lucide-react';
 import { useInvitation } from '../context/InvitationContext';
 import { APP_MODE } from '../data/invitation';
 import { processAndResizePhoto } from '../utils/imageResize';
@@ -13,7 +13,7 @@ interface GalleryProps {
   currentLang: Language;
 }
 
-export const Gallery: React.FC<GalleryProps> = () => {
+export const Gallery: React.FC<GalleryProps> = ({ currentLang }) => {
   const [activePhotoIndex, setActivePhotoIndex] = useState<number | null>(null);
   const { galleryPhotos, addGalleryPhoto } = useInvitation();
 
@@ -54,17 +54,20 @@ export const Gallery: React.FC<GalleryProps> = () => {
         transition={{ duration: 0.7, ease: 'easeOut' }}
         className="mb-8 max-w-[34ch] mx-auto text-center"
       >
-        <SwashHeading text="OUR GALLERY" className="mx-auto text-center" />
+        <SwashHeading text={currentLang === 'id' ? 'GALERI KAMI' : 'OUR GALLERY'} className="mx-auto text-center" />
       </motion.div>
 
       {/* 
-        Editorial Collage Layout Matching User Reference (Image 1):
-        - Top: Full-width hero photo with rounded corners
-        - Left column: 1 tall portrait photo + 2 square photos stacked
-        - Right column: 2 square photos stacked + 1 tall portrait photo
+        Editorial Collage Layout Matching User Reference:
+        - Top: Full-width hero photo with rounded corners (Photo #1 / index 0)
+        - Thematic sequence left-to-right across rows:
+          Row 1: Left [1] (Tall) + Right [2] (Square)
+          Row 2: Left [3] (Square) + Right [4] (Square)
+          Row 3: Left [5] (Square) + Right [6] (Tall)
+        - Bottom: Full-width landscape card (Photo #8 / index 7)
       */}
       <div className="space-y-3 max-w-md mx-auto select-none">
-        {/* 1. Full-width top hero photo */}
+        {/* 1. Full-width top hero photo (Index 0) */}
         {galleryPhotos[0] && (
           <motion.div
             initial={{ opacity: 0, scale: 0.88, y: 24 }}
@@ -88,12 +91,12 @@ export const Gallery: React.FC<GalleryProps> = () => {
           </motion.div>
         )}
 
-        {/* 2. Interlocking 2-column layout */}
+        {/* 2. Interlocking 2-column layout with left-to-right horizontal row pairing */}
         {galleryPhotos.length > 1 && (
           <div className="grid grid-cols-2 gap-3">
-            {/* Left Column: 1 Tall photo + 2 Smaller stacked photos */}
+            {/* Left Column: Row 1 Left [1] (Tall), Row 2 Left [3] (Square), Row 3 Left [5] (Square) */}
             <div className="flex flex-col gap-3">
-              {/* Tall photo (middle-left) */}
+              {/* Row 1 Left: Photo index 1 (Tall) */}
               {galleryPhotos[1] && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.88, y: 24 }}
@@ -117,13 +120,64 @@ export const Gallery: React.FC<GalleryProps> = () => {
                 </motion.div>
               )}
 
-              {/* Small photo 1 (bottom-left top) */}
-              {galleryPhotos[2] && (
+              {/* Row 2 Left: Photo index 3 (Square) */}
+              {galleryPhotos[3] && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.88, y: 24 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true, margin: '-30px' }}
                   transition={{ type: 'spring', stiffness: 260, damping: 22, delay: 0.08 }}
+                  onClick={() => openLightboxAt(3)}
+                  className="relative w-full aspect-square rounded-[18px] overflow-hidden border border-white/15 bg-black/40 shadow-xl cursor-pointer group"
+                >
+                  <img
+                    src={galleryPhotos[3]?.src}
+                    alt={galleryPhotos[3]?.alt}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="p-2 rounded-full bg-black/60 border border-white/30 text-white backdrop-blur-sm">
+                      <Maximize2 className="w-4 h-4" />
+                    </span>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Row 3 Left: Photo index 5 (Square) */}
+              {galleryPhotos[5] && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.88, y: 24 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-30px' }}
+                  transition={{ type: 'spring', stiffness: 260, damping: 22, delay: 0.12 }}
+                  onClick={() => openLightboxAt(5)}
+                  className="relative w-full aspect-square rounded-[18px] overflow-hidden border border-white/15 bg-black/40 shadow-xl cursor-pointer group"
+                >
+                  <img
+                    src={galleryPhotos[5]?.src}
+                    alt={galleryPhotos[5]?.alt}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="p-2 rounded-full bg-black/60 border border-white/30 text-white backdrop-blur-sm">
+                      <Maximize2 className="w-4 h-4" />
+                    </span>
+                  </div>
+                </motion.div>
+              )}
+            </div>
+
+            {/* Right Column: Row 1 Right [2] (Square), Row 2 Right [4] (Square), Row 3 Right [6] (Tall) */}
+            <div className="flex flex-col gap-3">
+              {/* Row 1 Right: Photo index 2 (Square) */}
+              {galleryPhotos[2] && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.88, y: 24 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-30px' }}
+                  transition={{ type: 'spring', stiffness: 260, damping: 22, delay: 0.04 }}
                   onClick={() => openLightboxAt(2)}
                   className="relative w-full aspect-square rounded-[18px] overflow-hidden border border-white/15 bg-black/40 shadow-xl cursor-pointer group"
                 >
@@ -141,40 +195,13 @@ export const Gallery: React.FC<GalleryProps> = () => {
                 </motion.div>
               )}
 
-              {/* Small photo 2 (bottom-left bottom) */}
-              {galleryPhotos[3] && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.88, y: 24 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-30px' }}
-                  transition={{ type: 'spring', stiffness: 260, damping: 22, delay: 0.12 }}
-                  onClick={() => openLightboxAt(3)}
-                  className="relative w-full aspect-square rounded-[18px] overflow-hidden border border-white/15 bg-black/40 shadow-xl cursor-pointer group"
-                >
-                  <img
-                    src={galleryPhotos[3]?.src}
-                    alt={galleryPhotos[3]?.alt}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="p-2 rounded-full bg-black/60 border border-white/30 text-white backdrop-blur-sm">
-                      <Maximize2 className="w-4 h-4" />
-                    </span>
-                  </div>
-                </motion.div>
-              )}
-            </div>
-
-            {/* Right Column: 2 Smaller stacked photos + 1 Tall photo */}
-            <div className="flex flex-col gap-3">
-              {/* Small photo 1 (middle-right top) */}
+              {/* Row 2 Right: Photo index 4 (Square) */}
               {galleryPhotos[4] && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.88, y: 24 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true, margin: '-30px' }}
-                  transition={{ type: 'spring', stiffness: 260, damping: 22, delay: 0.04 }}
+                  transition={{ type: 'spring', stiffness: 260, damping: 22, delay: 0.08 }}
                   onClick={() => openLightboxAt(4)}
                   className="relative w-full aspect-square rounded-[18px] overflow-hidden border border-white/15 bg-black/40 shadow-xl cursor-pointer group"
                 >
@@ -192,31 +219,7 @@ export const Gallery: React.FC<GalleryProps> = () => {
                 </motion.div>
               )}
 
-              {/* Small photo 2 (middle-right bottom) */}
-              {galleryPhotos[5] && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.88, y: 24 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-30px' }}
-                  transition={{ type: 'spring', stiffness: 260, damping: 22, delay: 0.08 }}
-                  onClick={() => openLightboxAt(5)}
-                  className="relative w-full aspect-square rounded-[18px] overflow-hidden border border-white/15 bg-black/40 shadow-xl cursor-pointer group"
-                >
-                  <img
-                    src={galleryPhotos[5]?.src}
-                    alt={galleryPhotos[5]?.alt}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="p-2 rounded-full bg-black/60 border border-white/30 text-white backdrop-blur-sm">
-                      <Maximize2 className="w-4 h-4" />
-                    </span>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Tall photo (bottom-right) */}
+              {/* Row 3 Right: Photo index 6 (Tall) */}
               {galleryPhotos[6] && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.88, y: 24 }}
@@ -268,17 +271,17 @@ export const Gallery: React.FC<GalleryProps> = () => {
         )}
       </div>
 
-      {/* Button: "Our Gallery" that triggers the Lightbox (shows all photos in modal) */}
+      {/* Button: "Our Gallery" / "Buka Galeri" that triggers the Lightbox (shows all photos in modal) */}
       <div className="mt-8 flex justify-center">
         <AnimatedButton
           onClick={() => openLightboxAt(0)}
-          aria-label="Open Our Gallery"
+          aria-label={currentLang === 'id' ? 'Buka Galeri' : 'Open Our Gallery'}
         >
-          Our Gallery
+          {currentLang === 'id' ? 'Buka Galeri' : 'Our Gallery'}
         </AnimatedButton>
       </div>
 
-      {/* Quick Add Photo option in Demo and Editor modes (like joyfulday) */}
+      {/* Quick Add Photo option in Demo and Editor modes */}
       {APP_MODE !== 'final' && (
         <div className="mt-4 flex flex-col items-center justify-center gap-1.5 font-arial">
           <label className="btn-pill-transparent text-xs font-arial cursor-pointer inline-flex items-center gap-2 border-dashed border-white/40 hover:border-white/80 bg-white/5 hover:bg-white/15 px-4 py-2 transition shadow-sm">
@@ -298,7 +301,7 @@ export const Gallery: React.FC<GalleryProps> = () => {
         </div>
       )}
 
-      {/* Fullscreen Lightbox matching reference screenshot */}
+      {/* Fullscreen Lightbox */}
       <Lightbox
         photos={galleryPhotos}
         currentIndex={activePhotoIndex}
