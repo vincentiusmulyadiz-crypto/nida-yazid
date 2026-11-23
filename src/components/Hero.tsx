@@ -50,8 +50,8 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
           <HandwrittenCoupleName groom={couple.bride.name} bride={couple.groom.name} delay={0.45} trigger="animate" />
         </h1>
 
-        {/* Extended desktop quote matching Renita layout with font of this invite */}
-        <blockquote className="max-w-[48vw] font-['Arimo',sans-serif] drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
+        {/* Extended desktop quote using font-arial */}
+        <blockquote className="max-w-[48vw] font-arial drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
           <p
             dir="rtl"
             lang="ar"
