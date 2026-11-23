@@ -81,7 +81,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
         <div className="hidden lg:block absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/80 via-black/35 to-transparent pointer-events-none z-[1]" />
       </motion.div>
 
-      {/* Quote at the TOP: using font-arial and exact sizing from Annisa & Adam */}
+      {/* Quote at the TOP: Arial font + balanced sizing so Arabic & translation stay centered inside bounds */}
       <motion.div
         style={{
           opacity: contentOpacity,
@@ -92,24 +92,25 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
         <div
           style={{
             marginTop: 'calc(env(safe-area-inset-top, 0px) + 44px)',
+            fontFamily: 'Arial, Helvetica, sans-serif',
           }}
-          className="w-[90%] max-w-[380px] mx-auto text-center"
+          className="w-[90%] max-w-[380px] mx-auto flex flex-col items-center text-center"
         >
           <p
             dir="rtl"
             lang="ar"
-            className="font-arial mb-2.5 text-[clamp(8.2px,2.05cqw,9.8px)] leading-[1.6] whitespace-nowrap text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
+            className="mb-2.5 text-[clamp(6.8px,1.75cqw,8.4px)] leading-[1.6] whitespace-nowrap text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
           >
             وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
           </p>
           <p
-            className="font-arial text-[clamp(9.2px,2.25cqw,10.5px)] leading-[1.45] text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
+            className="text-[clamp(9.2px,2.25cqw,10.5px)] leading-[1.45] text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
           >
             &ldquo;{currentLang === 'id'
               ? 'Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.'
               : 'And among His signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts. Verily in that are signs for those who reflect.'}&rdquo;
           </p>
-          <p className="font-arial text-[11px] sm:text-[12px] tracking-[0.16em] font-semibold uppercase text-white/90 mt-2 text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] leading-relaxed">
+          <p className="text-[11px] sm:text-[12px] tracking-[0.16em] font-semibold uppercase text-white/90 mt-2 text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] leading-relaxed">
             (QS. Ar-Rum: 21)
           </p>
         </div>
