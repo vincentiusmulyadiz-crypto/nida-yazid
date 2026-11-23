@@ -81,36 +81,36 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
         <div className="hidden lg:block absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/80 via-black/35 to-transparent pointer-events-none z-[1]" />
       </motion.div>
 
-      {/* Quote at the TOP: wide bounds matching Renita format, font of this invite, no animation */}
+      {/* Quote at the TOP: matching reference screenshot position, scale, and format across all devices */}
       <motion.div
         style={{
           opacity: contentOpacity,
           y: contentY,
         }}
-        className="absolute inset-x-0 mx-auto text-center px-3 sm:px-4 z-10 pointer-events-none"
+        className="absolute inset-x-0 top-0 mx-auto text-center z-10 pointer-events-none"
       >
         <div
           style={{
-            marginTop: 'calc(env(safe-area-inset-top, 0px) + 68px)',
+            marginTop: 'calc(env(safe-area-inset-top, 0px) + 9.5cqw)',
           }}
-          className="w-[90%] max-w-[380px] mx-auto text-center"
+          className="w-[88cqw] mx-auto text-center"
         >
           <p
             dir="rtl"
             lang="ar"
-            className="font-['Arimo',sans-serif] mb-2.5 text-[clamp(8.2px,2.05cqw,9.8px)] leading-[1.6] whitespace-nowrap text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
+            className="font-['Arimo',sans-serif] mb-[2.2cqw] text-[clamp(6.5px,2.15cqw,11px)] leading-[1.6] whitespace-nowrap text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)] font-normal text-white/95"
           >
             وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
           </p>
           <p
-            className="font-['Arimo',sans-serif] text-[clamp(9.2px,2.25cqw,10.5px)] leading-[1.48] text-justify [text-align-last:center] drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
+            className="font-['Arimo',sans-serif] text-[clamp(7.5px,2.5cqw,13px)] leading-[1.45] text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)] font-normal text-white/95"
           >
             &ldquo;{currentLang === 'id'
               ? 'Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.'
-              : 'And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought.'}&rdquo;
+              : 'And among His signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts. Verily in that are signs for those who reflect.'}&rdquo;
           </p>
-          <p className="font-['Arimo',sans-serif] text-[10.5px] sm:text-[11.5px] tracking-[0.16em] font-semibold uppercase text-[#EADBC8] mt-2 text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] leading-relaxed">
-            {currentLang === 'id' ? 'QS. AR-RUM : 21' : 'SURAH AR-RUM : 21'}
+          <p className="font-['Arimo',sans-serif] text-[clamp(8.5px,2.8cqw,14px)] tracking-[0.04em] font-semibold text-white/95 mt-[2.6cqw] text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)] leading-relaxed">
+            (QS. Ar-Rum: 21)
           </p>
         </div>
       </motion.div>

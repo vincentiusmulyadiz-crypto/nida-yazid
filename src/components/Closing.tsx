@@ -41,8 +41,9 @@ export const Closing: React.FC<ClosingProps> = ({ currentLang }) => {
           }}
         />
 
-        {/* Subtle bottom gradient only for footer credit readability, keeping full photo opacity & clarity */}
-        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black/70 to-transparent pointer-events-none z-[1]" />
+        {/* Top & bottom shadow gradients for readability while keeping photo clarity */}
+        <div className="absolute inset-x-0 top-0 h-[34%] bg-gradient-to-b from-black/75 via-black/35 to-transparent pointer-events-none z-[1]" />
+        <div className="absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-black/80 via-black/35 to-transparent pointer-events-none z-[1]" />
       </div>
 
       {/* Top Floating Overlay: Couple Names ("With Love" / "Dengan Kasih") */}

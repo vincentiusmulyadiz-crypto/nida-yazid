@@ -62,10 +62,10 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
           <p className="text-[clamp(13px,1vw,16px)] leading-[1.45] text-[#F7F5F0]/95 font-normal [text-wrap:pretty] mb-[6px]">
             &ldquo;{currentLang === 'id'
               ? 'Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.'
-              : 'And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought.'}&rdquo;
+              : 'And among His signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts. Verily in that are signs for those who reflect.'}&rdquo;
           </p>
-          <cite className="block text-[clamp(11px,0.85vw,13px)] text-[#EADBC8] not-italic mb-[18px] tracking-[0.12em] uppercase font-semibold">
-            {currentLang === 'id' ? 'QS. AR-RUM : 21' : 'SURAH AR-RUM : 21'}
+          <cite className="block text-[clamp(11px,0.85vw,13px)] text-[#EADBC8] not-italic mb-[18px] tracking-[0.06em] font-semibold">
+            (QS. Ar-Rum: 21)
           </cite>
         </blockquote>
 
