@@ -151,13 +151,13 @@ export const BrideSection: React.FC<BrideSectionProps> = ({
         }}
         className="absolute right-[24px] bottom-[96px] text-right z-20 pointer-events-auto flex flex-col items-end max-w-[85%]"
       >
-        <div className="space-y-3 text-right">
+        <div className="text-right">
           <h2 className="text-[clamp(46px,10.5cqw,58px)] text-[#EADBC8] leading-[1.05] drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)] text-right">
             <MixedText text={bride.name} />
           </h2>
 
-          <p className="font-['Arimo',sans-serif] text-[clamp(14px,3.2cqw,16px)] font-medium text-white/95 leading-normal drop-shadow-[0_1px_8px_rgba(0,0,0,0.6)] tracking-wide text-right">
-            ({bride.fullName})
+          <p className="font-['Arimo',sans-serif] mt-4 sm:mt-5 text-[clamp(14px,3.2cqw,16px)] font-medium text-white/95 leading-normal drop-shadow-[0_1px_8px_rgba(0,0,0,0.6)] tracking-wide text-right">
+            {bride.fullName}
           </p>
         </div>
 
@@ -167,15 +167,15 @@ export const BrideSection: React.FC<BrideSectionProps> = ({
           {parentsLine2 && <span>{parentsLine2}</span>}
         </div>
 
-        {/* Instagram link (right-aligned) */}
+        {/* Instagram link (right-aligned, >=44px tap target per mobile layout standard) */}
         {bride.instagram && (
-          <div className="mt-4 flex justify-end">
+          <div className="mt-2 flex justify-end">
             <a
               href={`https://instagram.com/${bride.instagram.replace('@', '')}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Instagram ${bride.instagram}`}
-              className="inline-flex items-center gap-2 py-1 text-white hover:opacity-80 transition-opacity select-none"
+              className="inline-flex items-center gap-2 py-2.5 min-h-[44px] text-white hover:opacity-80 active:opacity-70 transition-opacity select-none"
             >
               <svg
                 width="16"

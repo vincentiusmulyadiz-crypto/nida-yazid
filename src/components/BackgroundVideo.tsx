@@ -40,12 +40,12 @@ export const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ className = ''
       <AnimatePresence initial={false}>
         <motion.div
           key={activeIndex}
-          initial={{ opacity: 0, scale: 1.12 }}
-          animate={{ opacity: 1, scale: 1.02 }}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 0, filter: 'blur(10px)' }}
+          animate={{ opacity: 1, filter: 'blur(0px)' }}
+          exit={{ opacity: 0, filter: 'blur(10px)' }}
           transition={{
-            opacity: { duration: 1.6, ease: 'easeInOut' },
-            scale: { duration: 7.2, ease: 'easeOut' },
+            opacity: { duration: 1.4, ease: 'easeInOut' },
+            filter: { duration: 1.4, ease: 'easeInOut' },
           }}
           className="absolute inset-0 w-full h-full"
         >
