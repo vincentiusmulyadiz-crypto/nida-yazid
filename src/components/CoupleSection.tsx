@@ -94,7 +94,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
             marginTop: 'calc(env(safe-area-inset-top, 0px) + 44px)',
             fontFamily: 'Arial, Helvetica, sans-serif',
           }}
-          className="w-[90%] max-w-[380px] mx-auto flex flex-col items-center text-center"
+          className="w-[88cqw] mx-auto flex flex-col items-center text-center"
         >
           <p
             dir="rtl"
@@ -110,7 +110,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
               ? 'Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.'
               : 'And among His signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts. Verily in that are signs for those who reflect.'}&rdquo;
           </p>
-          <p className="text-[11px] sm:text-[12px] tracking-[0.16em] font-semibold uppercase text-white/90 mt-2 text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] leading-relaxed">
+          <p className="text-[clamp(9.5px,2.5cqw,12px)] tracking-[0.16em] font-semibold uppercase text-white/90 mt-2 text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] leading-relaxed">
             (QS. Ar-Rum: 21)
           </p>
         </div>
