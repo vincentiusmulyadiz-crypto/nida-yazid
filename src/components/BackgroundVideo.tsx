@@ -47,7 +47,7 @@ export const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ className = ''
             opacity: { duration: 1.4, ease: 'easeInOut' },
             filter: { duration: 1.4, ease: 'easeInOut' },
           }}
-          className="absolute inset-0 w-full h-full"
+          className="absolute -inset-4 w-[calc(100%+32px)] h-[calc(100%+32px)]"
         >
           <img
             src={slides[activeIndex]}
