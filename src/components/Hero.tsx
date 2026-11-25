@@ -52,7 +52,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
 
         {/* Extended desktop quote using Arial (no Arabic on desktop left panel) */}
         <blockquote
-          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+          style={{ fontFamily: "'Arimo', Arial, Helvetica, sans-serif" }}
           className="max-w-[48vw] drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]"
         >
           <p className="text-[clamp(13px,1vw,16px)] leading-[1.45] text-[#F7F5F0]/95 font-normal [text-wrap:pretty] mb-[6px]">

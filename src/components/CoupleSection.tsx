@@ -93,14 +93,14 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
         <div
           style={{
             marginTop: 'calc(env(safe-area-inset-top, 0px) + 44px)',
-            fontFamily: 'Arial, Helvetica, sans-serif',
+            fontFamily: "'Arimo', Arial, Helvetica, sans-serif",
           }}
           className="w-[88cqw] mx-auto flex flex-col items-center text-center"
         >
           <p
             dir="rtl"
             lang="ar"
-            className="mb-2.5 text-[clamp(5.5px,1.75cqw,8.4px)] leading-[1.6] whitespace-nowrap text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
+            className="mb-2.5 text-[clamp(5.5px,1.68cqw,8px)] leading-[1.6] whitespace-nowrap text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
           >
             وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
           </p>
