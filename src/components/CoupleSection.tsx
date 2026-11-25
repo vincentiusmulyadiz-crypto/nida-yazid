@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from 'motion/react'
 import { useInvitation } from '../context/InvitationContext';
 import { Language } from '../types';
 import { CoupleName, HandwrittenText, HandwrittenCoupleName } from './FlourishText';
+import { useIsDesktop } from '../utils/useIsDesktop';
 
 interface CoupleSectionProps {
   currentLang: Language;
@@ -20,7 +21,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
   const [photoError, setPhotoError] = useState(false);
   const prefersReduced = useReducedMotion();
 
-  const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 1024;
+  const isDesktop = useIsDesktop();
 
   // Scroll Zoom: photo grows from 0.92 to 1 and border-radius from 24px to 0
   const { scrollYProgress } = useScroll({
@@ -51,7 +52,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
     <section
       id="couple"
       ref={sectionRef}
-      className="relative w-full min-h-[100lvh] h-[100lvh] lg:h-[100dvh] overflow-hidden select-none bg-transparent flex-none m-0 p-0 border-0 rounded-none"
+      className="relative w-full min-h-screen h-screen min-h-[100lvh] h-[100lvh] lg:h-[100dvh] overflow-hidden select-none bg-transparent flex-none m-0 p-0 border-0 rounded-none"
     >
       {/* Photo layer with scroll zoom, 85% brightness, and 10% analog film grain */}
       <motion.div
@@ -99,7 +100,7 @@ export const CoupleSection: React.FC<CoupleSectionProps> = ({
           <p
             dir="rtl"
             lang="ar"
-            className="mb-2.5 text-[clamp(6.8px,1.75cqw,8.4px)] leading-[1.6] whitespace-nowrap text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
+            className="mb-2.5 text-[clamp(5.5px,1.75cqw,8.4px)] leading-[1.6] whitespace-nowrap text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.75)] font-normal text-white/95"
           >
             وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
           </p>

@@ -5,6 +5,7 @@ import { Language } from '../types';
 import { Countdown } from './Countdown';
 import { MixedText } from './FlourishText';
 import { AnimatedLinkButton } from './AnimatedButton';
+import { useIsDesktop } from '../utils/useIsDesktop';
 
 interface SaveTheDateSectionProps {
   currentLang: Language;
@@ -16,7 +17,7 @@ export const SaveTheDateSection: React.FC<SaveTheDateSectionProps> = ({ currentL
   const { reception, isPreview } = useInvitation();
   const prefersReduced = useReducedMotion();
 
-  const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 1024;
+  const isDesktop = useIsDesktop();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start end', 'start start'],
@@ -53,7 +54,7 @@ export const SaveTheDateSection: React.FC<SaveTheDateSectionProps> = ({ currentL
     <section
       id="save-the-date"
       ref={sectionRef}
-      className="relative w-full h-[100dvh] overflow-hidden bg-black text-center flex flex-col justify-between py-12 sm:py-14 px-6 select-none flex-none m-0 p-0 border-0 rounded-none"
+      className="relative w-full min-h-screen h-screen min-h-[100dvh] h-[100dvh] overflow-hidden bg-black text-center flex flex-col justify-between py-12 sm:py-14 px-6 select-none flex-none m-0 p-0 border-0 rounded-none"
     >
       {/* Background Photo Layer with Scroll Zoom */}
       <motion.div

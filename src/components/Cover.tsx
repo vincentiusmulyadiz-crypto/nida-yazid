@@ -18,7 +18,7 @@ export const Cover: React.FC<CoverProps> = ({ onOpenInvitation, isOpen }) => {
   return (
     <section
       id="cover"
-      className={`relative min-h-[100dvh] h-[100dvh] w-full flex flex-col justify-between p-6 sm:p-8 pt-[calc(env(safe-area-inset-top,0px)+28px)] pb-[calc(env(safe-area-inset-bottom,0px)+72px)] sm:pb-[calc(env(safe-area-inset-bottom,0px)+84px)] z-20 text-center bg-transparent select-none overflow-hidden box-border transition-all duration-500 ease-out ${
+      className={`relative min-h-screen h-screen min-h-[100dvh] h-[100dvh] w-full flex flex-col justify-between p-6 sm:p-8 pt-[calc(env(safe-area-inset-top,0px)+28px)] pb-[calc(env(safe-area-inset-bottom,0px)+72px)] sm:pb-[calc(env(safe-area-inset-bottom,0px)+84px)] z-20 text-center bg-transparent select-none overflow-hidden box-border transition-all duration-500 ease-out ${
         isOpen ? 'max-lg:opacity-0 max-lg:scale-96 max-lg:pointer-events-none' : 'opacity-100 scale-100'
       }`}
     >

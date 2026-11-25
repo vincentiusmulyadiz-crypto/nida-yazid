@@ -22,7 +22,7 @@ export const Closing: React.FC<ClosingProps> = ({ currentLang }) => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      className="relative w-full h-[100dvh] overflow-hidden bg-black text-center flex flex-col justify-between select-none"
+      className="relative w-full min-h-screen h-screen min-h-[100dvh] h-[100dvh] overflow-hidden bg-black text-center flex flex-col justify-between select-none"
     >
       {/* Full-bleed Photo Layer covering 1 full section */}
       <div className="absolute inset-0 w-full h-full overflow-hidden bg-black z-0">

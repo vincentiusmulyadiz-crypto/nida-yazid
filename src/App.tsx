@@ -177,7 +177,7 @@ function InvitationApp() {
   };
 
   return (
-    <div className="relative min-h-[100dvh] w-full bg-transparent lg:bg-[#12100E] text-[#F2EFE8] font-body selection:bg-white/20 selection:text-white flex flex-col lg:flex-row">
+    <div className="relative min-h-screen min-h-[100dvh] w-full bg-[#12100E] text-[#F2EFE8] font-body selection:bg-white/20 selection:text-white flex flex-col lg:flex-row">
       {/* 
         DESKTOP LEFT SCREEN (>=1024px): 
         Takes ALL remaining width: flex: 1 (min-width: 0), full height (100dvh).
@@ -191,7 +191,7 @@ function InvitationApp() {
         - Mobile (<1024px): natural single full-bleed column flowing with root document (like Amik & Aldo)
         - container-type: inline-size for cqw-based typography
       */}
-      <div className="w-full lg:w-[min(calc(100dvh*9/16),40vw)] lg:flex-none min-h-[100dvh] lg:h-[100dvh] relative lg:overflow-hidden bg-transparent invitation-column z-20">
+      <div className="w-full md:max-w-[440px] md:mx-auto lg:max-w-none lg:mx-0 lg:w-[min(calc(100dvh*9/16),40vw)] lg:flex-none min-h-screen min-h-[100dvh] lg:h-[100dvh] relative lg:overflow-hidden bg-transparent invitation-column z-20">
         {/* Slim preview banner at the top of the invitation column (demo mode only) */}
         {APP_MODE === 'demo' && <PreviewBanner currentLang={currentLang} />}
 

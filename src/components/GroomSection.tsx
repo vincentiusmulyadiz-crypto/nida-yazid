@@ -4,6 +4,7 @@ import { useInvitation } from '../context/InvitationContext';
 import { invitationData } from '../data/invitation';
 import { Language } from '../types';
 import { MixedText } from './FlourishText';
+import { useIsDesktop } from '../utils/useIsDesktop';
 import { formatParentsLines } from '../utils/formatParents';
 
 interface GroomSectionProps {
@@ -23,7 +24,7 @@ export const GroomSection: React.FC<GroomSectionProps> = ({
   const t = invitationData.translations[currentLang] || invitationData.translations.id;
   const { groom } = couple;
 
-  const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 1024;
+  const isDesktop = useIsDesktop();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start end', 'start start'],
@@ -49,7 +50,7 @@ export const GroomSection: React.FC<GroomSectionProps> = ({
     <section
       id="groom"
       ref={sectionRef}
-      className="relative w-full min-h-[100lvh] h-[100lvh] lg:h-[100dvh] overflow-hidden select-none bg-transparent flex-none m-0 p-0 border-0 rounded-none"
+      className="relative w-full min-h-screen h-screen min-h-[100lvh] h-[100lvh] lg:h-[100dvh] overflow-hidden select-none bg-transparent flex-none m-0 p-0 border-0 rounded-none"
     >
       {/* Photo layer with scroll zoom */}
       <motion.div

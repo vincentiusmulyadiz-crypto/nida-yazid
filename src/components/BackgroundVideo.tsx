@@ -35,7 +35,7 @@ export const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ className = ''
         transform: 'translate3d(0, 0, 0)',
         WebkitTransform: 'translate3d(0, 0, 0)',
       }}
-      className={`fixed lg:absolute -top-[env(safe-area-inset-top,0px)] -bottom-[env(safe-area-inset-bottom,0px)] inset-x-0 lg:inset-0 w-full min-h-[100lvh] lg:min-h-0 lg:h-full z-0 pointer-events-none select-none overflow-hidden bg-transparent ${className}`}
+      className={`fixed inset-0 lg:absolute w-full min-h-screen min-h-[100lvh] lg:min-h-0 lg:h-full z-0 pointer-events-none select-none overflow-hidden bg-transparent ${className}`}
     >
       <AnimatePresence initial={false}>
         <motion.div
