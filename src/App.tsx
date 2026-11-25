@@ -191,7 +191,7 @@ function InvitationApp() {
         - Mobile (<1024px): natural single full-bleed column flowing with root document (like Amik & Aldo)
         - container-type: inline-size for cqw-based typography
       */}
-      <div className="w-full md:max-w-[440px] md:mx-auto lg:max-w-none lg:mx-0 lg:w-[min(calc(100dvh*9/16),40vw)] lg:flex-none min-h-screen min-h-[100dvh] lg:h-[100dvh] relative lg:overflow-hidden bg-transparent invitation-column z-20">
+      <div className="w-full md:max-w-[440px] md:mx-auto lg:max-w-none lg:mx-0 lg:w-[min(calc(100dvh*9/16),40vw)] lg:flex-none min-h-screen min-h-[100dvh] lg:h-[100dvh] relative lg:overflow-hidden bg-transparent z-20">
         {/* Slim preview banner at the top of the invitation column (demo mode only) */}
         {APP_MODE === 'demo' && <PreviewBanner currentLang={currentLang} />}
 
@@ -206,7 +206,7 @@ function InvitationApp() {
         {/* Scrollable invitation content container (desktop uses inner scrollbar, mobile uses root document scroll) */}
         <main
           ref={rightColumnRef}
-          className={`w-full min-h-[100dvh] lg:h-[100dvh] relative z-10 ${
+          className={`w-full min-h-screen min-h-[100dvh] lg:h-[100dvh] relative z-10 invitation-column ${
             hasOpened ? 'lg:overflow-y-auto' : 'lg:overflow-hidden'
           } no-scrollbar bg-transparent`}
         >
