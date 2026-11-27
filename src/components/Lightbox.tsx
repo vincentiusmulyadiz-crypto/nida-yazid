@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -40,7 +41,16 @@ export const Lightbox: React.FC<LightboxProps> = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentIndex, onClose, onNext, onPrev]);
 
-  if (currentIndex === null) return null;
+  useEffect(() => {
+    if (currentIndex === null || typeof document === 'undefined') return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [currentIndex]);
+
+  if (currentIndex === null || typeof document === 'undefined') return null;
   const currentPhoto = photos[currentIndex];
   const len = photos.length;
   const prev2Index = (currentIndex - 2 + len) % len;
@@ -80,14 +90,18 @@ export const Lightbox: React.FC<LightboxProps> = ({
     touchStartX.current = null;
   };
 
-  return (
+  return createPortal(
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 z-50 flex flex-col items-center justify-between bg-black/95 backdrop-blur-xl p-3 sm:p-6 select-none"
+        style={{
+          paddingTop: 'calc(env(safe-area-inset-top, 0px) + 12px)',
+          paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 12px)',
+        }}
+        className="fixed inset-0 z-[9999] flex flex-col items-center justify-between bg-black/95 backdrop-blur-xl px-3 sm:px-6 select-none touch-none"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
@@ -98,8 +112,9 @@ export const Lightbox: React.FC<LightboxProps> = ({
           </span>
 
           <button
+            type="button"
             onClick={onClose}
-            className="p-2 text-white/80 hover:text-white transition-colors cursor-pointer"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 text-white/85 hover:text-white active:scale-95 transition-all cursor-pointer rounded-full bg-white/5 border border-white/15"
             aria-label="Close Lightbox"
           >
             <X className="w-6 h-6" />
@@ -225,6 +240,7 @@ export const Lightbox: React.FC<LightboxProps> = ({
           </div>
         )}
       </motion.div>
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 };
