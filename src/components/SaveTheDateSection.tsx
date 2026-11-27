@@ -35,7 +35,7 @@ export const SaveTheDateSection: React.FC<SaveTheDateSectionProps> = ({ currentL
   const contentY = prefersReduced ? 0 : rawContentY;
 
   const googleCalendarUrl = (() => {
-    const title = encodeURIComponent(reception.calendarEvent?.title || 'Resepsi Pernikahan: Nida & Yazid');
+    const title = encodeURIComponent(reception.calendarEvent?.title || 'Wedding Reception: Nida & Yazid');
     const start = reception.calendarEvent?.start || '20270110T034500Z';
     const end = reception.calendarEvent?.end || '20270110T060000Z';
     const dates = `${start}/${end}`;
