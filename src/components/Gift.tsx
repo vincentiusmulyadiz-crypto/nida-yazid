@@ -8,7 +8,36 @@ import { MixedText } from './FlourishText';
 import { GiftIcon } from './Icons';
 import { AnimatedLinkButton } from './AnimatedButton';
 
-export const WA_PENGANTIN = "6288228684215";
+export const WA_PENGANTIN = "6285221244934";
+
+async function copyTextSafe(text: string): Promise<boolean> {
+  if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // Fallback below for iOS Safari / In-App WebView / HTTP
+    }
+  }
+  try {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.top = '0';
+    textarea.style.left = '-9999px';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    textarea.setSelectionRange(0, text.length);
+    const ok = document.execCommand('copy');
+    document.body.removeChild(textarea);
+    return ok;
+  } catch {
+    return false;
+  }
+}
 
 interface GiftProps {
   currentLang: Language;
@@ -20,13 +49,13 @@ export const Gift: React.FC<GiftProps> = ({ currentLang, onShowToast }) => {
   const { bankAccounts: contextBankAccounts, showPhysicalGift } = useInvitation();
   const bankAccounts = contextBankAccounts?.length ? contextBankAccounts : invitationData.bankAccounts;
 
-  const handleCopyAccount = (accountNumber: string, _bankName: string, index: number) => {
-    navigator.clipboard.writeText(accountNumber);
+  const handleCopyAccount = async (accountNumber: string, _bankName: string, index: number) => {
+    await copyTextSafe(accountNumber);
     setCopiedIdx(index);
     setTimeout(() => {
       setCopiedIdx((prev) => (prev === index ? null : prev));
     }, 2000);
-    onShowToast('Tersalin');
+    onShowToast(currentLang === 'id' ? 'Tersalin' : 'Copied');
   };
 
   return (
@@ -36,7 +65,7 @@ export const Gift: React.FC<GiftProps> = ({ currentLang, onShowToast }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.75, ease: 'easeOut' }}
-      className="relative w-full py-14 px-6 sm:px-8 bg-transparent text-center"
+      className="relative z-20 w-full py-14 px-6 sm:px-8 bg-transparent text-center"
     >
       {/* Heading: Wedding Gift (without icon and without subtitle) */}
       <motion.div
@@ -83,7 +112,7 @@ export const Gift: React.FC<GiftProps> = ({ currentLang, onShowToast }) => {
                 <button
                   type="button"
                   onClick={() => handleCopyAccount(account.accountNumber, account.bankName, idx)}
-                  className="shrink-0 p-2.5 rounded-full bg-white/10 hover:bg-[#EADBC8]/25 border border-[#EADBC8]/40 hover:border-[#EADBC8] text-[#EADBC8] hover:text-white transition-all cursor-pointer shadow-md"
+                  className="shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 rounded-full bg-white/10 hover:bg-[#EADBC8]/25 active:scale-95 border border-[#EADBC8]/40 hover:border-[#EADBC8] text-[#EADBC8] hover:text-white transition-all cursor-pointer shadow-md touch-manipulation"
                   aria-label={`Salin nomor rekening ${account.bankName}`}
                   title="Salin Nomor Rekening"
                 >
@@ -113,7 +142,7 @@ export const Gift: React.FC<GiftProps> = ({ currentLang, onShowToast }) => {
 
             <div className="pt-0.5 flex justify-center">
               <AnimatedLinkButton
-                href={`https://wa.me/${WA_PENGANTIN}?text=Halo%20Jattu%2C%20saya%20ingin%20mengirimkan%20kado%20fisik%20untuk%20pernikahan%20Seno%20%26%20Jattu.`}
+                href={`https://wa.me/${WA_PENGANTIN}?text=Halo%20Nida%20%26%20Yazid%2C%20saya%20ingin%20mengirimkan%20kado%20fisik%20untuk%20pernikahan%20kalian.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp Pengantin"
